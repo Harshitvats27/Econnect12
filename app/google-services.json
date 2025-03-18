@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "696584207111",
+    "project_id": "econnect12-a5157",
+    "storage_bucket": "econnect12-a5157.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696584207111:android:77ee420f7ed2035992e3a2",
+        "android_client_info": {
+          "package_name": "com.harshit_vats.econnect12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLJE56bAs4cF6ErsFuS507QRMGIpnrSF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
