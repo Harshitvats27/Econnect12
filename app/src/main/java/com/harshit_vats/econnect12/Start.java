@@ -25,7 +25,7 @@ public class Start extends AppCompatActivity {
     private Button login;
     private LinearLayout linearLayout;
     Animation topAnim, bottomAnim , leftAnim, rightAnim;
-
+ggggggggggggggggggggggggggggggggggggggggg
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
