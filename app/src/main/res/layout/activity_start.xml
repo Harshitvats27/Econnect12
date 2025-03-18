@@ -1,133 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animationCache="true"
-    android:backgroundTint="#E6DDDB"
-    android:background="@color/white"
-    android:textAlignment="gravity"
-    tools:context=".Start">
+    android:background="@color/navy_blue">
 
+    <!-- App Title -->
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="53dp"
-        android:gravity="center"
-        android:backgroundTint="#00E5FF"
-        android:fontFamily="@font/apptext"
-        android:text="@string/econnect12"
-        android:textColor="#02000B"
-        android:textSize="36dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Econnect12"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="352dp"
-        android:layout_height="161dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/logo2" />
-
-    <TextView
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="341dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="28dp"
-
-        android:ems="10"
-        android:gravity="start|top"
-        android:text="@string/description"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:layout_marginTop="48dp"/>
 
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="348dp"
-        android:layout_height="44dp"
-        android:text="Log In!"
+    <!-- White Background Rectangle -->
+    <View
+        android:id="@+id/top_rectangle_start"
+        android:layout_width="407dp"
+        android:layout_height="613dp"
+        android:background="@drawable/white_rectangle__1_"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/black"
-        app:layout_constraintHorizontal_bias="0.355"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintVertical_bias="0.026" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="347dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="52dp"
-        android:text="@string/issue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.359"
-        android:textColor="@color/black"
+        app:layout_constraintHeight_percent="0.75"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <HorizontalScrollView
-        android:layout_width="388dp"
-        android:layout_height="152dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
+    <!-- Content Container -->
+    <LinearLayout
+        android:id="@+id/whiteContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+        <!-- Lottie Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnim"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Econnect animation"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="econnect_loader.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+
+        <!-- Tagline -->
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:layout_height="wrap_content"
+            android:text="Stay Connected, Stay Informed, Care Always"
+            android:textColor="@color/navy_blue"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:layout_marginTop="4dp"/>
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="348dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/y" />
+        <!-- Description -->
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="262dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/hii" />
+        <!-- Log In Button -->
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="380dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/hi" />
-        </LinearLayout>
-    </HorizontalScrollView>
+        <!-- Divider -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="Econnect12 is a seamless platform connecting parents, teachers, and students. Track attendance, access notes, view results, and manage everything—effortlessly, all in one place."
+            android:textColor="@color/navy_blue"
+            android:textSize="15sp" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="484dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.5" />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/navy_blue"
+            android:elevation="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingStart="40dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="12dp"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green_white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/navy_blue" />
+
+        <!-- Help Info -->
+        <TextView
+            android:id="@+id/helpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="Need help? Mail us at group37@gmail.com\nor contact ‪+91 9184472502‬"
+            android:textColor="@color/navy_blue"
+            android:textSize="13sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

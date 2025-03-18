@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.SharedPreferences;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,6 +60,7 @@ public class adminlogin extends AppCompatActivity {
         String emailText = email.getText().toString().trim();
         String passwordText = password.getText().toString().trim();
 
+        // Basic validation
         if (emailText.isEmpty() || passwordText.isEmpty()) {
             Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
             return;
@@ -71,11 +74,19 @@ public class adminlogin extends AppCompatActivity {
                     for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                         String dbEmail = document.getString("email");
                         String dbPassword = document.getString("password");
+                        String adminId = document.getId();  // Retrieve adminId (document ID)
 
                         if (dbEmail != null && dbPassword != null &&
                                 dbEmail.equals(emailText) && dbPassword.equals(passwordText)) {
 
                             isAdminFound = true;
+
+                            // Save the adminId in SharedPreferences
+                            SharedPreferences sharedPreferences = getSharedPreferences("AdminPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("adminId", adminId);  // Save adminId
+                            editor.apply();
+
                             Toast.makeText(adminlogin.this, "Admin Login Successful!", Toast.LENGTH_SHORT).show();
 
                             // Redirect to Admin Dashboard
@@ -92,4 +103,5 @@ public class adminlogin extends AppCompatActivity {
                 })
                 .addOnFailureListener(e -> Toast.makeText(adminlogin.this, "Database Error!", Toast.LENGTH_SHORT).show());
     }
+
 }

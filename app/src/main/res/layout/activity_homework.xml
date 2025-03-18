@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- Faculty Details -->
+    <TextView
+        android:id="@+id/faculty_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faculty Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/faculty_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Department"
+        android:textSize="16sp"
+        android:paddingBottom="16dp"/>
+
+    <!-- Class Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Class"
+        android:textSize="16sp"
+        android:paddingBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="8dp"/>
+
+    <!-- Section Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Section"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="8dp"/>
+
+    <!-- Homework Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Homework"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/edit_homework"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="top"
+        android:hint="Type homework details here..."
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <!-- Post Homework Button -->
+    <Button
+        android:id="@+id/btn_post_homework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#008577"
+        android:text="Post Homework"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+</LinearLayout>
