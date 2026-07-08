@@ -94,6 +94,11 @@ E-Connect12 uses Role-Based Access Control (RBAC) at the Spring Boot backend lev
 Watch the app in action here: **[Demo Video - Google Drive](https://drive.google.com/file/d/1F4YEDTiGpKjsnZsRpXFA7Px7qtuMu0Ch/view)**
 
 ---
+## 🎥 Backend Repository
+
+Check the repository here: **[Econnect12appbackend](https://github.com/Harshitvats27/Econnect12appbackend)**
+
+---
 
 **Developed & Maintained by:** Harshit Vats
 **Project:** E-Connect12
